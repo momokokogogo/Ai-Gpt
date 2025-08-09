@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- No title -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sidebar.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <button id="new-chat-btn">New Chat</button>
+    <button id="history-btn">History</button>
+    <button id="settings-btn">Settings</button>
+    <div class="history-list" id="history-list"></div>
+  <div id="settings-panel" class="settings-panel">
+      <div><b>Settings</b></div>
+      <div style="margin-top:12px;">
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select">
+          <option value="scary">Scary (Black/Grey)</option>
+          <option value="allblack">All Black</option>
+          <option value="neon">Neon (Classic)</option>
+          <option value="neon-green">Neon Green</option>
+          <option value="neon-pink">Neon Pink</option>
+          <option value="neon-orange">Neon Orange</option>
+          <option value="neon-purple">Neon Purple</option>
+          <option value="neon-yellow">Neon Yellow</option>
+          <option value="neon-red">Neon Red</option>
+          <option value="neon-blue">Neon Blue</option>
+          <option value="light">Light</option>
+          <option value="purple">Purple</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+        </select>
+      </div>
+      <div style="margin-top:12px;">
+        <label for="accent-select">Accent Color:</label>
+        <select id="accent-select">
+          <option value="#00fff7">Neon Blue</option>
+          <option value="#ff00ea">Neon Pink</option>
+          <option value="#00ff5e">Neon Green</option>
+          <option value="#ffae00">Neon Orange</option>
+          <option value="#fff">White</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="chat-container" style="margin-left:200px;max-width:calc(95vw - 200px);">
+    <div class="chat-header">Chat</div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <form class="chat-input-area" id="chat-form">
+      <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script src="https://cdn.puter.com/puter.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

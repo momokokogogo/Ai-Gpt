@@ -1,0 +1,97 @@
+/* Sidebar styles for chat app */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+  background: rgba(10,10,10,0.98);
+  border-right: 2px solid #222;
+  box-shadow: 2px 0 16px #0008;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 40px;
+  gap: 18px;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.sidebar button {
+  background: #181818;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  margin: 0 16px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 6px;
+  box-shadow: 0 0 8px #222a;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar button:hover {
+  background: #222;
+  color: #fff;
+}
+
+.sidebar .history-list {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0 16px 16px 16px;
+  background: #111a;
+  border-radius: 8px;
+  padding: 8px 0;
+  color: #bbb;
+  font-size: 0.95rem;
+}
+.sidebar .history-list .history-item {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sidebar .history-list .history-item:hover {
+  background: #222;
+  color: #fff;
+}
+
+.sidebar .settings-panel {
+  background: #181818;
+  border-radius: 8px;
+  margin: 0 16px 16px 16px;
+  padding: 12px;
+  color: #ccc;
+  font-size: 0.95rem;
+  display: none;
+}
+.sidebar .settings-panel.active {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+    border-right: none;
+    border-bottom: 2px solid #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: unset;
+  }
+  .sidebar button {
+    margin: 0 8px;
+    padding: 8px 0;
+    font-size: 0.95rem;
+  }
+  .sidebar .history-list, .sidebar .settings-panel {
+    display: none !important;
+  }
+}
